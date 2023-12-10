@@ -1,4 +1,5 @@
 import { APIKeyInput } from '@/components/APIKeyInput';
+import { Tipping } from  '@/components/Tipping';
 import { CodeBlock } from '@/components/CodeBlock';
 import { LanguageSelect } from '@/components/LanguageSelect';
 import { ModelSelect } from '@/components/ModelSelect';
@@ -15,12 +16,18 @@ export default function Home() {
   const [loading, setLoading] = useState<boolean>(false);
   const [hasTranslated, setHasTranslated] = useState<boolean>(false);
   const [apiKey, setApiKey] = useState<string>('');
+  const [tipping, setTipping] = useState<string>('');
 
   const handleTranslate = async () => {
     const maxCodeLength = model === 'gpt-3.5-turbo' ? 6000 : 128000;
 
     if (!apiKey) {
       alert('Please enter an API key.');
+      return;
+    }
+
+    if (!tipping) {
+      alert('Please enter a Tip Amount.');
       return;
     }
 
@@ -139,7 +146,7 @@ export default function Home() {
       </Head>
       <div className="flex h-full min-h-screen flex-col items-center bg-[#0E1117] px-4 pb-20 text-neutral-200 sm:px-10">
         <div className="mt-10 flex flex-col items-center justify-center sm:mt-20">
-          <div className="text-4xl font-bold">AI Code Translator</div>
+          <div className="text-5xl font-bold">AI Coder</div>
         </div>
 
         <div className="mt-6 text-center text-sm">
