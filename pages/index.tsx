@@ -59,6 +59,7 @@ export default function Home() {
       inputCode,
       model,
       apiKey,
+      tipping,
     };
 
     const response = await fetch('/api/translate', {
@@ -119,6 +120,12 @@ export default function Home() {
     localStorage.setItem('apiKey', value);
   };
 
+  const handleTippingChange = (value: string) => {
+    setTipping(value);
+
+    localStorage.setItem('apiKey', value);
+  };
+
   useEffect(() => {
     if (hasTranslated) {
       handleTranslate();
@@ -136,10 +143,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Code Translator</title>
+        <title>Ai Coder</title>
         <meta
           name="description"
-          content="Use AI to translate code from one language to another."
+          content="AI to translate code from one programming language to another."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -156,8 +163,10 @@ export default function Home() {
         <div className="mt-2 flex items-center space-x-2">
           <ModelSelect model={model} onChange={(value) => setModel(value)} />
 
+
+
           <button
-            className="w-[140px] cursor-pointer rounded-md bg-violet-500 px-4 py-2 font-bold hover:bg-violet-600 active:bg-violet-700"
+            className="w-[120px] cursor-pointer rounded-md bg-violet-500 px-4 py-2 font-bold hover:bg-violet-600 active:bg-violet-700"
             onClick={() => handleTranslate()}
             disabled={loading}
           >
