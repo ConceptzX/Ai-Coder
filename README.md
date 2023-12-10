@@ -1,8 +1,3 @@
-  Tipping branch is a work in progress to add a tipping option that will encourage ChatGPT to perform more complex translations.
-  I am not a coder and I am working on this in my spare time.
-  Please feel free to submit pull requests if you have features you'd like to add.
-  If the submission is within the scope of what I feel is useful to the project, I will add it.
-  
 **************************************************************************************************************************
 **************************************************************************************************************************
   This is my own implementation of AI Code Translator, USE AT YOUR OWN RISK, DO NOT EXPECT ANY SUPPORT
@@ -10,9 +5,12 @@
 **************************************************************************************************************************
 
 
-AI Code Translator
+AI Coder
 
-Use AI to translate code from one language to another.
+AI to translate code from one programming language to another.
+
+Added functionality to add a tip (in tokens) to your request to encourage ChatGPT to process larger and more complex operations. 
+Tips are paid to ChatGPT, Default should be 0.
 
 ![Ai-Coder](./public/screenshot.png)
 
