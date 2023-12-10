@@ -14,7 +14,7 @@ AI Code Translator
 
 Use AI to translate code from one language to another.
 
-![AI Code Translator](./public/screenshot.png)
+![Ai-Coder](./public/screenshot.png)
 
 ## Running Locally
 
